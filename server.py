@@ -25,12 +25,13 @@ class Server:
         a, b, c = request
         
         # Compute verification value
-        verify_val = (
-            a * b * (1 - c) + 
-            (1 - a) * (1 - b) * c + 
-            a * (1 - b) * c + 
-            (1 - a) * b * c
-        )
+        # verify_val = (
+        #     a * b * (1 - c) + 
+        #     (1 - a) * (1 - b) * c + 
+        #     a * (1 - b) * c + 
+        #     (1 - a) * b * c
+        # )
+        verify_val = a or (b and c)
         
         if verify_val == 0:
             print("Bob doesn't match")

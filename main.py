@@ -30,7 +30,14 @@ def main():
     
     # For the attribute with many options(AND OR) values are sent as list within tuple <Yes, No, [Yes,Yes,No], No>
     print("Bob makes request to server")
-    bob_request = [1, 1, 0] #1-Yes 0-No
+    print("Are you a Graduate?")
+    a = int(input("Enter 1 for Yes and 0 for No: "))
+    print("Are you a Undergraduate?")
+    b = int(input("Enter 1 for Yes and 0 for No: "))
+    print("Are you a CS?")
+    c = int(input("Enter 1 for Yes and 0 for No: "))
+
+    bob_request = [a, b, c] #1-Yes 0-No
     
     # Choose s_cpb first
     s_cpb = 11
